@@ -6,9 +6,11 @@ var Promise = require('es6-promise').Promise;
 test.beforeEach(async t => {
 
   t.context.app = new Application({ 
-           path: electron, args:['/Users/taboca/Desktop/all/05_clientes/2016/pti/latinoware-dev/electron/50_testing_electron_ava']});
+    path: electron, args:['.']
+  });
 
   await t.context.app.start();
+
 });
 
 test.afterEach.always(async t => {
